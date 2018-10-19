@@ -1,5 +1,5 @@
 # Blender Curve coordinate points
-Displays a list of coordinate points of curve in an array to use for Three.js
+Displays a list of coordinate points of a curve in an array to use for Three.js
 
 1. Create a Bezier or Nurbs curve in Blender (Make sure it's selected)<br>
 2. Open the text editor and click open <br>
