@@ -1,4 +1,4 @@
-# Blender
+# Export Blender Curve to Three.js
 Export Bezier/Nurbs curve coordinate points in an array for Three.js
 
 1. Create a Bezier or Nurbs curve in Blender <br>
