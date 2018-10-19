@@ -1,0 +1,26 @@
+#code modified from http://blenderscripting.blogspot.com/2016/05/the-coordinates-of-curve-control-points.html
+
+import bpy
+
+obj = bpy.context.active_object
+
+if obj.type == 'CURVE':
+    for subcurve in obj.data.splines:
+        curvetype = subcurve.type
+        print('curve type:', curvetype)
+
+        #Display nurbs curve coordinate points in an array
+        if curvetype == 'NURBS':
+            print("curve is closed:", subcurve.use_cyclic_u)
+
+            for nurbspoint in subcurve.points:
+                print( [nurbspoint.co[0], nurbspoint.co[1], nurbspoint.co[2]],',')
+
+
+        #Display bezier curve coordinate points in an array
+        if curvetype == 'BEZIER':
+            print("curve is closed:", subcurve.use_cyclic_u)
+
+            for bezpoint in subcurve.bezier_points:
+                print( [bezpoint.co[0], bezpoint.co[1], bezpoint.co[2]],',')
+        
